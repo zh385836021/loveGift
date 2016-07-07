@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lovegift.lv.lovegift.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editText"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/editText"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="0dp"
+                android:text="搜索"
+                android:textColor="@color/write"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/btn_search"
+                android:layout_toStartOf="@id/btn_search"
+                android:background="@color/write"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="搜索更多精彩"
+                android:imeOptions="actionSearch"
+                android:maxLength="15"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="大家都在搜"-->
+    <!--android:layout_below="@+id/search_search"-->
+    <!--android:layout_alignRight="@+id/search_search"-->
+    <!--android:layout_alignEnd="@+id/search_search" />-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:layout_below="@id/tv"-->
+    <!--android:id="@+id/search_rcv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+
+    <FrameLayout
+        android:id="@+id/search_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+    </FrameLayout>
+</RelativeLayout>

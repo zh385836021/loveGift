@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="90dp"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:id="@+id/strategy_gridview_sdv"
+        app:progressBarImage="@mipmap/loading"
+        app:progressBarImageScaleType="centerInside"
+        app:progressBarAutoRotateInterval="1000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/strategy_gridview_tv"
+        android:gravity="center"
+        android:text="111111"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

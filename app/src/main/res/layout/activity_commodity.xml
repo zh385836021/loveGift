@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="商品详情"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:touchscreenBlocksFocus="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:id="@+id/rLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_commodity"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp" />
+
+                    <!--这个布局是专门用来存放圆点-->
+                    <LinearLayout
+                        android:id="@+id/ll_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/vp_commodity"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="25dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/write"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp">
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/textViewPrice"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:lines="4"
+                        android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textViewFavoritesCount"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tbLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/write"
+                app:layout_collapseMode="pin"
+                app:tabIndicatorColor="@color/textRed"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/textRed"
+                app:tabTextColor="@color/black" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="1">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="0.13"
+            android:background="@drawable/shape_btn_favourity"
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/ic_action_compact_favourite"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingTop="2dp"
+            android:text="喜欢"
+            android:textColor="@color/textRed"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_goTianMao"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.87"
+            android:background="@drawable/shape_btn_tianmao"
+            android:text="去天猫购买"
+            android:textColor="@color/write"
+            android:textSize="17sp"
+            android:focusableInTouchMode="true" />
+    </LinearLayout>
+</LinearLayout>

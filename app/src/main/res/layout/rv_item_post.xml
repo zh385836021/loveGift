@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rv_item_post_cv"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/rv_item_post_sdv"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="160dp"
+            app:roundedCornerRadius="8dp"
+            app:roundTopLeft="true"
+            app:roundTopRight="true"
+            app:roundBottomLeft="true"
+            app:roundBottomRight="true"
+            app:progressBarImage="@mipmap/loading"
+            app:progressBarImageScaleType="centerInside"
+            app:progressBarAutoRotateInterval="1000"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_item_post_sdv"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="#000000"
+                android:layout_height="35dp"
+                android:text="味蕾之诗-少女心零食礼盒"
+                android:textSize="12sp"
+                android:id="@+id/rv_item_post_name" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/rv_item_post_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="89.00"
+                    android:textColor="#f54c4c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/rv_item_post_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="1111111"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rv_item_post_count"
+                    android:src="@mipmap/ic_small_heart_normal" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F84E4E</color>
+    <color name="colorPrimaryDark">#9f3032</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="write">#ffffff</color>
+    <color name="itemRecyclerviewCommodity">#ffffff</color>
+    <color name="textViewPrice">#ff0000</color>
+    <color name="textViewFavoritesCount">#c6c1c1</color>
+    <color name="textRed">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="pointNormal">#70CCCCCC</color>
+    <color name="mainColor">#F84E4E</color>
+    <color name="pointFocused">#90AAAAAA</color>
+    <color name="fragmentBgColor">#FAF0E6</color>
+    <color name="textGrad">#A8A9AB</color>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lovegift.lv.lovegift.RegisterActivity">
+
+    <TextView
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:background="@android:color/holo_red_light"
+        android:id="@+id/rl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+    </TextView>
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/rl_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/reg_tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="用户名："
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/reg_et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reg_tv_username"
+                android:singleLine="true"
+                 />
+        </RelativeLayout>
+
+        <!--密码-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/reg_tv_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="密码："
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/reg_et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reg_tv_pwd"
+                android:singleLine="true"
+                 />
+        </RelativeLayout>
+
+        <!--再次输入密码-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/rep_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="确认密码："
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/reg_rep_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rep_pwd"
+                android:singleLine="true"
+                 />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_normal"
+            android:onClick="btnReg"
+            android:text="注册"
+            android:textSize="20sp"
+            android:layout_margin="30dp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

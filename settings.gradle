@@ -1,0 +1,1 @@
+include ':app', ':sharesdk', ':onekeyshare', ':library', ':BarCodeTest原版library'

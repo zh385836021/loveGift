@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lovegift.lv.lovegift.StrategyTvActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/strategy_tv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#f54c4c"
+        app:layout_collapseMode="pin"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <TextView
+            android:id="@+id/strategy_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="爱礼物"
+            android:textSize="20dp"
+            android:singleLine="true"
+            android:textColor="#fff" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/strategy_tv_toolbar"
+        android:id="@+id/strategy_tv_swip"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/strategy_tv_rv"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/strategy_tv_floatbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@mipmap/ic_arrow_upward_white_48dp"
+        app:backgroundTint="#F06292"
+        app:rippleColor="#E91E63"
+        app:elevation="2dp"
+        app:pressedTranslationZ="4dp"
+        />
+
+</RelativeLayout>

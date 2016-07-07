@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/category_strategy_recyclerview_top"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:scrollbars="none"
+                    ></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/category_strategy_textview"
+                    android:text="查看全部"
+                    android:clickable="true"
+                    android:layout_below="@+id/category_strategy_recyclerview_top"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/strategy_type_tv"
+                    android:layout_margin="10dp"
+                    android:text="品类"
+                    />
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:layout_below="@id/strategy_type_tv"
+                    android:id="@+id/strategy_type_gv"
+                    android:numColumns="4"
+                    ></GridView>
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/strategy_style_tv"
+                        android:layout_margin="10dp"
+                        android:text="风格"
+                        />
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@id/strategy_style_tv"
+                        android:id="@+id/strategy_style_gv"
+                        android:numColumns="4"
+                        ></GridView>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/strategy_character_tv"
+                        android:layout_margin="10dp"
+                        android:text="对象"
+                        />
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@id/strategy_character_tv"
+                        android:id="@+id/strategy_character_gv"
+                        android:numColumns="4"
+                        ></GridView>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

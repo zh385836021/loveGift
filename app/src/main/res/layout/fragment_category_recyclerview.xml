@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:id="@+id/category_strategy_recyclerview_sdv"
+        android:layout_margin="10dp"
+        app:viewAspectRatio="2"
+        app:progressBarImage="@mipmap/loading"
+        app:progressBarImageScaleType="centerInside"
+        app:progressBarAutoRotateInterval="1000"
+        app:roundedCornerRadius="10dp"
+        app:roundTopLeft="true"
+        app:roundTopRight="true"
+        app:roundBottomLeft="true"
+        app:roundBottomRight="true"
+
+        />
+
+</LinearLayout>

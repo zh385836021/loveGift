@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.lovegift.lv.lovegift"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.facebook.fresco:fresco:0.11.0'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile project(':onekeyshare')
+    compile project(':sharesdk')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile project(':library')
+    compile project(':BarCodeTest原版library')
+    compile files('libs/jpush-android-2.1.6.jar')
+}

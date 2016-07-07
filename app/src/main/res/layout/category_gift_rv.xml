@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:id="@+id/gift_lv_ll"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5"
+            android:background="#E8E8E8"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/gift_rv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="名字名字"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5"
+            android:background="#E8E8E8"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_lv_ll"
+        android:layout_marginTop="10dp"
+        android:id="@+id/gift_rv_rv"
+        ></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
